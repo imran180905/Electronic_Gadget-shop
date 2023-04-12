@@ -1,10 +1,11 @@
 import { ShoppingCartIcon } from "@heroicons/react/24/solid";
 import { Link, NavLink } from "react-router-dom";
+import Mobile from "./HeaderMobile";
 
 const Header = () => {
   return (
-    <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-      <div className="inline-flex justify-between items-center w-full">
+    <div className="  px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+      <div className="relative inline-flex justify-between items-center w-full">
         <Link to="/" className="inline-flex items-center ">
           <div className="flex items-center justify-center w-12 h-12 rounded-full bg-cyan-200">
             <svg
@@ -67,6 +68,7 @@ const Header = () => {
             </NavLink>
           </li>
         </ul>
+        <Mobile />
       </div>
     </div>
   );
