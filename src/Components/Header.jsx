@@ -18,7 +18,7 @@ const Header = () => {
             </svg>
           </div>
           <div>
-            <h1 className="text-bold text-xl tracking-wide text-gray-800 ml-3">
+            <h1 className="text-bold text-xl lg:text-2xl tracking-wide text-gray-800 ml-3">
               HeroGadget
             </h1>
           </div>
