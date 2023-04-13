@@ -5,6 +5,7 @@ import App from "./App";
 import About from "./Components/Pages/About";
 import ErrorPage from "./Components/Pages/Error";
 import Home from "./Components/Pages/Home";
+import Shop from "./Components/Pages/Shop";
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -16,6 +17,11 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "shop",
+        element: <Shop />,
+        loader: () => fetch("products.json"),
       },
       {
         path: "about",
