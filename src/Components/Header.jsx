@@ -1,8 +1,12 @@
 import { ShoppingCartIcon } from "@heroicons/react/24/solid";
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { CartContext } from "../App";
 import Mobile from "./HeaderMobile";
 
 const Header = () => {
+  const [cart, setCart] = useContext(CartContext);
+  console.log(cart.length);
   return (
     <div className="  px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
       <div className="relative inline-flex justify-between items-center w-full">
@@ -55,6 +59,7 @@ const Header = () => {
               className={({ isActive }) => (isActive ? "active" : "default")}
             >
               <ShoppingCartIcon className="h-6 w-6 text-cyan-400" />
+              <p className="absolute top-0 right-28 text-base">{cart.length}</p>
             </NavLink>
           </li>
           <li>

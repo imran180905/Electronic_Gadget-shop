@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { Toaster } from "react-hot-toast";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import About from "./Components/Pages/About";
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
+    loader: productsAndCartData,
     children: [
       {
         path: "/",
@@ -40,6 +42,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <>
+      <Toaster />
+      <RouterProvider router={router} />
+    </>
   </React.StrictMode>
 );

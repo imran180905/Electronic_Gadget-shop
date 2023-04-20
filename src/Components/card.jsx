@@ -1,5 +1,5 @@
 const Card = ({ product, handleAddToCart }) => {
-  const { name, picture, price, category, id } = product;
+  const { name, picture, price, category } = product;
 
   return (
     <div className="border bg-gray-100  p-8 rounded-lg">
@@ -17,7 +17,7 @@ const Card = ({ product, handleAddToCart }) => {
       <p className="text-xl font-semibold">Category: {category}</p>
       <p className="text-xl mt-3">Price: {price} $</p>
       <button
-        onClick={() => handleAddToCart(id)}
+        onClick={() => handleAddToCart(product)}
         type="button"
         className="btn-primary md:px-16 lg:px-24"
       >

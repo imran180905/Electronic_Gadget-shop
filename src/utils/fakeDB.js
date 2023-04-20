@@ -49,5 +49,8 @@ const removeDb = (id) => {
 
 // Delete all items in the Cart
 const removeCart=()=> localStorage.removeItem('shopping-cart');
+
+
+
 export { addTODb, getStoredCart, removeDb, removeCart };
 
